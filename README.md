@@ -1,10 +1,13 @@
 # DengAI: Predicting Disease Spread 🦟📊
 
-A machine learning project for predicting dengue fever outbreaks using environmental and climate data from San Juan, Puerto Rico and Iquitos, Peru.
+A comprehensive machine learning project for predicting dengue fever outbreaks using environmental and climate data from San Juan, Puerto Rico and Iquitos, Peru. This project achieved **rank 2770 out of 6790** participants in the DengAI competition.
+
+![Competition Ranking](Rank.png)
 
 ## 📋 Table of Contents
 
 - [Project Overview](#project-overview)
+- [Competition Results](#competition-results)
 - [Problem Statement](#problem-statement)
 - [Dataset Description](#dataset-description)
 - [Project Structure](#project-structure)
@@ -19,6 +22,16 @@ A machine learning project for predicting dengue fever outbreaks using environme
 ## 🎯 Project Overview
 
 This project aims to predict the number of dengue fever cases in two cities using machine learning techniques. Dengue fever is a mosquito-borne illness that poses significant public health challenges in tropical and subtropical regions. By accurately forecasting dengue outbreaks, public health officials can implement timely control measures and allocate resources effectively.
+
+The complete analysis and modeling approach is documented in **`Final_Notebook2.ipynb`**, which contains a comprehensive workflow including data exploration, feature engineering, model development, and evaluation.
+
+## 🏆 Competition Results
+
+This project was submitted to the DengAI competition and achieved:
+- **Rank: 2770 out of 6790 participants**
+- **Percentile: Top 41%**
+
+The ranking demonstrates solid performance in a competitive machine learning challenge with thousands of participants worldwide.
 
 ## 🔍 Problem Statement
 
@@ -52,13 +65,15 @@ The project uses three main datasets:
 
 ```
 ML_py-Group-Project/
-├── README.md                    # Project documentation
-├── code.ipynb                   # Main Jupyter notebook with analysis
-├── requirements.txt             # Python dependencies
+├── README.md                      # Project documentation
+├── Final_Notebook2.ipynb          # Main Jupyter notebook with comprehensive analysis
+├── our_submission.csv             # Final competition submission
+├── Rank.png                       # Competition ranking screenshot
+├── requirements.txt               # Python dependencies
 └── Data/
-    ├── dengue_features_train.csv    # Training features
-    ├── dengue_labels_train.csv      # Training labels  
-    └── dengue_features_test.csv     # Test features
+    ├── dengue_features_train.csv      # Training features
+    ├── dengue_labels_train.csv        # Training labels  
+    └── dengue_features_test.csv       # Test features
 ```
 
 ## 🚀 Installation & Setup
@@ -80,12 +95,12 @@ pip install -r requirements.txt
 
 ### Step 3: Launch Jupyter Notebook
 ```bash
-jupyter notebook code.ipynb
+jupyter notebook Final_Notebook2.ipynb
 ```
 
 ## 💻 Usage
 
-1. **Open the Jupyter Notebook**: Launch `code.ipynb`
+1. **Open the Jupyter Notebook**: Launch `Final_Notebook2.ipynb`
 2. **Run All Cells**: Execute the notebook from top to bottom
 3. **View Results**: Analyze the model performance and predictions
 
@@ -107,8 +122,13 @@ jupyter notebook code.ipynb
   - Seasonal decomposition
 
 ### Model Selection
-- **Algorithm**: Poisson Regression
-- **Rationale**: Suitable for count data (dengue cases)
+- **Algorithms**: Comprehensive comparison of 5 different models:
+  - **PoissonRegressor**: Generalized linear model for count data
+  - **NegativeBinomialRegressor**: Extension of Poisson to handle overdispersion
+  - **RandomForestRegressor**: Non-linear ensemble model
+  - **XGBoost**: Gradient boosting baseline
+  - **Tuned XGBoost**: Hyperparameter-optimized version via GridSearchCV
+- **Rationale**: Multiple model comparison to find the best performer for dengue case prediction
 - **Approach**: Separate models for each city due to different outbreak patterns
 
 ### Evaluation Metrics
@@ -117,15 +137,17 @@ jupyter notebook code.ipynb
 
 ## 📈 Results
 
-The project successfully builds predictive models for both cities:
+The project successfully builds predictive models for both cities and achieved competitive performance:
 
 - **San Juan Model**: Captures periodic seasonal patterns and major outbreak cycles
 - **Iquitos Model**: Handles more erratic, less predictable outbreak patterns
 
 ### Model Performance
+- **Competition Ranking**: 2770 out of 6790 participants (Top 41%)
 - Achieved reasonable MAE scores on validation data
 - Successfully identifies key environmental predictors
 - Demonstrates different feature importance for each city
+- Final submission available in `our_submission.csv`
 
 ## 🔑 Key Findings
 
@@ -144,7 +166,7 @@ The project successfully builds predictive models for both cities:
 
 ## 👥 Contributors
 
-This project was developed as a group machine learning project. 
+This project was developed as a group AI7101 Machine Learning with Python project. 
 
 ---
 
@@ -152,8 +174,3 @@ This project was developed as a group machine learning project.
 
 This project is available for educational and research purposes.
 
-## 🤝 Acknowledgments
-
-- Dataset provided by DrivenData's DengAI competition
-- Environmental data from various meteorological sources
-- Public health data from local health departments
