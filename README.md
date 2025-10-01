@@ -2,7 +2,7 @@
 
 A comprehensive machine learning project for predicting dengue fever outbreaks using environmental and climate data from San Juan, Puerto Rico and Iquitos, Peru. This project achieved **rank 2770 out of 6790** participants in the DengAI competition.
 
-![Competition Ranking](Rank.png)
+![Competition Ranking](Analysis_Images/Rank.png)
 
 ## 📋 Table of Contents
 
@@ -71,12 +71,12 @@ ML_py-Group-Project/
 ├── Final_Notebook2.ipynb          # Main Jupyter notebook with comprehensive analysis
 ├── final_submission.csv           # Final competition submission (XGBoost)
 ├── our_submission.csv             # Previous submission
-├── Rank.png                       # Competition ranking screenshot
-├── Models_Comparision.png         # Model performance comparison visualization
-├── heatmap_corr_sj.png            # San Juan correlation heatmap
 ├── requirements.txt               # Python dependencies
-├── Analysis_Images/               # Additional visualization outputs
-│   └── Data_Visu1.png             # Time series data visualization
+├── Analysis_Images/               # All visualization outputs
+│   ├── Data_Visu1.png             # Time series data visualization
+│   ├── heatmap_corr_sj.png        # San Juan correlation heatmap
+│   ├── Models_Comparision.png     # Model performance comparison visualization
+│   └── Rank.png                   # Competition ranking screenshot
 └── Data/
     ├── dengue_features_train.csv      # Training features (1,458 rows)
     ├── dengue_labels_train.csv        # Training labels (1,458 rows)
@@ -129,7 +129,7 @@ The notebook follows a comprehensive data science workflow with clear progressio
 ![Data Visualization](Analysis_Images/Data_Visu1.png)
 *Time series analysis showing different outbreak patterns between San Juan (blue) and Iquitos (green)*
 
-![Correlation Heatmap](heatmap_corr_sj.png)
+![Correlation Heatmap](Analysis_Images/heatmap_corr_sj.png)
 *Feature correlation matrix for San Juan - reveals relationships between climate variables*
 
 **Key findings:**
@@ -148,7 +148,7 @@ The notebook follows a comprehensive data science workflow with clear progressio
 ### Step 5: Model Building & Robust Evaluation
 **What it does:** Implements 5 different models with time-series cross-validation.
 
-![Model Comparison](Models_Comparision.png)
+![Model Comparison](Analysis_Images/Models_Comparision.png)
 *Cross-validation performance comparison across all models*
 
 **Models tested:**
@@ -238,11 +238,11 @@ The analysis reveals clear patterns and model performance through comprehensive 
 *Time series showing distinct outbreak patterns - San Juan exhibits cyclical seasonality while Iquitos shows sporadic, unpredictable spikes*
 
 **Feature Relationships:**
-![Correlation Heatmap](heatmap_corr_sj.png)
+![Correlation Heatmap](Analysis_Images/heatmap_corr_sj.png)
 *Climate variable correlations reveal strong relationships between temperature, humidity, and precipitation measurements*
 
 **Model Performance:**
-![Model Comparison](Models_Comparision.png)
+![Model Comparison](Analysis_Images/Models_Comparision.png)
 *Cross-validation results demonstrate XGBoost's superior performance across both cities, with significant improvements over baseline models*
 
 ## 🔑 Key Findings
